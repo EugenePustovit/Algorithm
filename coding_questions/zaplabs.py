@@ -18,6 +18,7 @@
 # True
 # False
 
+
 import collections
 
 
@@ -28,6 +29,14 @@ def check_string(str):
         char_dict[ch] += 1
         if char_dict[ch] > 1:
             return False
+
+    return True
+
+
+def check_string_(str):
+    str_set = set(list(str))
+    if len(str_set) != len(str):
+        return False
 
     return True
 
@@ -116,15 +125,15 @@ def find_happiness(num_list):
 
 
 if __name__ == "__main__":
-    # a = 'abcd'
-    # print(a)
-    # res = check_string(a)
-    # print(res)
-    #
-    # a = 'aa'
-    # print(a)
-    # res = check_string(a)
-    # print(res)
+    a = 'abcd'
+    print(a)
+    res = check_string_(a)
+    print(res)
 
-    a = [89, 123]
-    find_happiness(a)
+    a = 'aa'
+    print(a)
+    res = check_string_(a)
+    print(res)
+
+    # a = [89, 123]
+    # find_happiness(a)
